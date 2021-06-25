@@ -2,7 +2,7 @@ doctype html
 html
   head
     include ../partials/head.pug
-    link(rel='stylesheet', href='/stylesheets/products-list.css',type='text/css')
+    link(rel='stylesheet', href='/stylesheets/matches-list.css',type='text/css')
   body
     include ../partials/jumbotron-navbar.pug
     .page-content        
@@ -14,10 +14,12 @@ html
                     th Price
                     th Actions
             tbody
-                a.btn.btn-success.btn-lg(href='matches/add-match' role='button' aria-disabled='true') Add Match
-                each match in varMatches
-                    tr
-                        td=match.team1
-                        td=match.team2        
-                        td
-                            a(href="products/delete/"+product._id class="btn btn-danger") View
+                a.btn.btn-success.btn-lg(href= '/add-match' role='button' aria-disabled='true') Add Match
+                //- each match in varMatches
+                //-     tr
+                //-       td team1
+                //-       td team2 
+                //-       td city
+                //-       td date       
+                //-       td
+                //-         a(href="matches/view/"+ match._id class="btn btn-danger") View

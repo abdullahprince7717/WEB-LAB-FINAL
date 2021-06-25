@@ -18,7 +18,7 @@ router.get('/matches', async function (req, res, next) {
 });
 
 //ROUTE FOR A FORM PAGE THAT ADDS A PRODUCT 
-router.get('/match/add-match', checkSessionAuth, async function (req, res, next) {
+router.get('/add-match', checkSessionAuth, async function (req, res, next) {
 
     res.render("match/add-match");
 
