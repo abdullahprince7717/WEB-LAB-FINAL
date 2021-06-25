@@ -1,0 +1,32 @@
+head
+    title Add Match
+    
+    link(rel='stylesheet', href='/stylesheets/add-product.css',type='text/css')
+    
+
+body
+    .container
+      .row
+        .col-md-4
+          .form_main
+            h4.heading
+              strong ADD
+              | Match
+              span
+            .form
+              form#add-product-form(action='/matches/add-match' method='post' name='add-matches-form')
+                label(for='name') Name of Team 1
+                label(for='teams') Choose a Team:
+                select#teams(name='teams')
+                  option(value='Lahore Qalandars') Lahore Qalandars
+                  option(value='Peshawar Zalmi') Peshawar Zalmi
+                  option(value='Islamabad United') Islamabad United
+                  option(value='Quetta Gladiators') Quetta Gladiator
+                label(for='price') Name of Team 2
+                select#teams(name='teams')
+                  option(value='Lahore Qalandars') Lahore Qalandars
+                  option(value='Peshawar Zalmi') Peshawar Zalmi
+                  option(value='Islamabad United') Islamabad United
+                  option(value='Quetta Gladiators') Quetta Gladiator
+                input.search-btn(type='submit' class="input"  name='submit')
+                

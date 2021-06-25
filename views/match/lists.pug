@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    include ../partials/head.pug
+    link(rel='stylesheet', href='/stylesheets/products-list.css',type='text/css')
+  body
+    include ../partials/jumbotron-navbar.pug
+    .page-content        
+        h1=varTitle
+        table.table
+            thead
+                tr
+                    th Name
+                    th Price
+                    th Actions
+            tbody
+                a.btn.btn-success.btn-lg(href='matches/add-match' role='button' aria-disabled='true') Add Match
+                each match in varMatches
+                    tr
+                        td=match.team1
+                        td=match.team2        
+                        td
+                            a(href="products/delete/"+product._id class="btn btn-danger") View
